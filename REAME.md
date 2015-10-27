@@ -7,3 +7,5 @@ cd testonline/
 bundle install
 
 bundle update
+
+rails s
