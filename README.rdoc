@@ -5,23 +5,19 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.2.2 
 
-* System dependencies
+* git clone https://github.com/thanghm/-online-assessment.git
 
-* Configuration
+* cd testonline/
 
-* Database creation
+* bundle install
 
-* Database initialization
+* bundle update
 
-* How to run the test suite
+* rake db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* rails s
 
 
 Please feel free to use a different markup language if you do not plan to run
