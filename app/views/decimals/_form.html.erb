@@ -1,0 +1,21 @@
+<%= form_for(@decimal) do |f| %>
+  <% if @decimal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@decimal.errors.count, "error") %> prohibited this decimal from being saved:</h2>
+
+      <ul>
+      <% @decimal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.text_field :number, class: 'form-control', style: 'width:200px;', required: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Show IP", class: 'btn btn-primary' %>
+  </div>
+<% end %>

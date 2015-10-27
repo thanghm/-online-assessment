@@ -1,0 +1,34 @@
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+<br />
+
+<h1>Decimals to IP</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>IP</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @decimals.each do |decimal| %>
+      <tr>
+        <td><%= decimal.number %></td>
+        <td><%= decimal.ip %></td>
+        <td><%= link_to 'Show', decimal, class: 'btn btn-default btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_decimal_path(decimal), class: 'btn btn-success btn-sm' %></td>
+        <td><%= link_to 'Destroy', decimal, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Decimal', new_decimal_path, class: 'btn btn-link' %>

@@ -1,0 +1,25 @@
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+<br />
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>IP</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @decimal.number %></td>
+        <td><%= @decimal.ip %></td>
+      </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_decimal_path(@decimal), class: 'btn btn-link' %> |
+<%= link_to 'Back', decimals_path, class: 'btn btn-link' %>

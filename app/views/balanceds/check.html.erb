@@ -1,0 +1,16 @@
+<% if !flash[:error].blank? %>
+  <div class="alert alert-info" style="width:200px;">
+  <%= flash[:error] %>
+  </div>
+<% end %>
+<br />
+
+
+<%= form_tag({:action => 'check'}, {:id => 'balanceds'}) %>
+ <div class="field">
+    <%= label_tag :text %><br>
+    <%= text_field_tag :text, "",class: 'form-control', style: 'width:200px;', required: true %><div class="show_check"></div>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Check", class: 'btn btn-primary' %>
+  </div>
