@@ -2,7 +2,7 @@ online-assessment
 
 git clone https://github.com/thanghm/-online-assessment.git
 
-cd testonline
+cd testonline/
 
 bundle install
 
